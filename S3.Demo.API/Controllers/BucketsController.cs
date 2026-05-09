@@ -28,7 +28,7 @@ namespace S3.Demo.API.Controllers
             }
             catch (AmazonS3Exception ex)
             {
-                return BadRequest($"Error creating bucket: {ex.Message}");
+                return BadRequest($"Error creating bucket '{bucketName}': {ex.Message}");
             }
         }
 
@@ -60,7 +60,7 @@ namespace S3.Demo.API.Controllers
             }
             catch (AmazonS3Exception ex)
             {
-                return BadRequest($"Error deleting bucket: {ex.Message}");
+                return BadRequest($"Error deleting bucket '{bucketName}': {ex.Message}");
             }
         }
     }
